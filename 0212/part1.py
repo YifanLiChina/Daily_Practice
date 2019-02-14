@@ -18,7 +18,6 @@ k = np.arange(0, N + 1)  # seven possible outcomes
 
 pdf = stats.binom.pmf(k, N, p)  # probability density/mass function.
 cdf = stats.binom.cdf(k, N, p)  # cumulative density function
-
 ppdf, = plt.plot(k, pdf, label='pdf (N=6, p=0.5)')
 pcdf, = plt.plot(k, cdf, label='cdf (N=6, p=0.5)')
 
@@ -26,6 +25,6 @@ pcdf, = plt.plot(k, cdf, label='cdf (N=6, p=0.5)')
 # " 'list' object has no attribute 'get_label'"
 # fixed with https://stackoverflow.com/questions/
 # 36329269/python-legend-attribute-error
-plt.legend(handles=[ppdf, pcdf], loc='best')
+plt.legend(handles=[ppdf, pcdf,], loc='best')
 plt.grid(True)
 plt.show()
