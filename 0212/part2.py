@@ -12,12 +12,18 @@ for i in range(0,101):
 # compute the likelihood for each type of coin
 f = [0 for i in range(0,101)]
 for i in range(0,101):
-    f[i] = comb(6,2)*(p[i]**4)*((1-p[i])**2)
+    f[i] = comb(6,2)*(p[i]**2)*((1-p[i])**4)
 
-ML = max(f)
-MLE = p[f.index(ML)]
-print(ML)
-print(MLE)
+# ML = max(f)
+# MLE = p[f.index(ML)]
+# print(ML)
+# print(MLE)
+#
+# plt.plot(p, f)
+# plt.xlabel('types of coin: the probability of landing on heads')
+# plt.ylabel('likelihood of the observed sequence')
+# plt.grid(True)
+# plt.show()
 
 # compute the Posteriori for each type of coin
 fp = [0 for i in range(0,101)]
